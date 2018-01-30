@@ -1,14 +1,15 @@
 package com.example.k3vn19.paq.screen.start.controller;
 
-//import android.content.Intent;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 //import android.view.View;
 
-//import com.example.k3vn19.paq.R;
-//import com.example.k3vn19.paq.screen.start.model.StartModel;
+import com.example.k3vn19.paq.R;
+import com.example.k3vn19.paq.screen.main.controller.MainActivity;
+import com.example.k3vn19.paq.screen.start.model.StartModel;
 import com.example.k3vn19.paq.screen.start.view.StartView;
 
 /**
@@ -19,7 +20,7 @@ import com.example.k3vn19.paq.screen.start.view.StartView;
 
 public class StartActivity extends AppCompatActivity {
 
-    //private StartModel mModel;  //Currenly not used, will be used when we have accounts
+    private StartModel mModel;  //Currenly not used, will be used when we have accounts
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +32,14 @@ public class StartActivity extends AppCompatActivity {
         setContentView(mView.getRootView());
 
         //create model - will be used for checking if user is logged in
-        //mModel = new StartModel();
+        mModel = new StartModel();
 
         //this was made by default when creating android projct
         //setContentView(R.layout.view_start);
     }
 
 
-    /**
+
     @Override
     protected void onStart(){
         super.onStart();;
@@ -53,10 +54,10 @@ public class StartActivity extends AppCompatActivity {
             finish();
         } else {
             //otherwise, if not logged in, redirect to log in page.
-            Intent intent = new Intent(this, LoginActivity.class);
+            Intent intent = new Intent(this, MainActivity.class); //change this to LoginActivity
             startActivity(intent);
             finish();
         }
     }
-    **/
+
 }

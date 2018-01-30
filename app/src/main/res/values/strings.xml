@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">PAQ</string>
+    <string name="toReplace">toReplace</string>
+    <string name="description">Description</string>
+
+
+    <!-- For setting up tabs in MainView -->
+    <string name="alarmsText">ALARMS</string>
+    <string name="worldClockText">WORLD CLOCK</string>
+    <string name="stopWatchText">STOPWATCH</string>
+    <string name="timerText">TIMER</string>
+
+
 </resources>

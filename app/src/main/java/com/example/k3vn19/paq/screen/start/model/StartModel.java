@@ -7,4 +7,7 @@ package com.example.k3vn19.paq.screen.start.model;
  */
 
 public class StartModel {
+
+
+    public boolean isLoggedIn(){ return true;}
 }
