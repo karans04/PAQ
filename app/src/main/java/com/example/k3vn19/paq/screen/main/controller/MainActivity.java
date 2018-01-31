@@ -1,6 +1,5 @@
 package com.example.k3vn19.paq.screen.main.controller;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +8,7 @@ import android.view.LayoutInflater;
 
 import com.example.k3vn19.paq.R;
 import com.example.k3vn19.paq.common.Enums;
-import com.example.k3vn19.paq.screen.alarms.AlarmsFragment;
+import com.example.k3vn19.paq.screen.alarms.controller.AlarmsFragment;
 import com.example.k3vn19.paq.screen.main.model.MainModel;
 import com.example.k3vn19.paq.screen.main.view.MainView;
 import com.example.k3vn19.paq.screen.main.view.MainViewInterface;
@@ -121,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
             stopwatchFragment.isScreeenShow(false);
             timerFragment.isScreenShow(true);
         }
-         **/
+         */
     }
 
     @Override
