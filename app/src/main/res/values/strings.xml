@@ -10,5 +10,15 @@
     <string name="stopWatchText">STOPWATCH</string>
     <string name="timerText">TIMER</string>
 
+    <!-- For view_alarms_list -->
+    <string name="addAlarm">ADD ALARM</string>
+
+    <!-- view_detailed_alarm.xml -->
+    <string name="detailed_label_snooze">SNOOZE</string>
+    <string name="detailed_numberOfSnooze">NUMBER OF SNOOZE</string>
+    <string name="detailed_snoozeDuration">SNOOZE DURATION</string>
+    <string name="detailed_label_interactivity">INTERACTIVITY</string>
+    <string name="detailed_intensity">INTENSITY</string>
+    <string name="detailed_seqLength">SEQUENCE LENGTH</string>
 
 </resources>

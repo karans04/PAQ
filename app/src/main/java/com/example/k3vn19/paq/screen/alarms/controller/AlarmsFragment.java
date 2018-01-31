@@ -17,7 +17,6 @@ import com.example.k3vn19.paq.utils.database.AlarmEntity;
  * Created by k3vn19 on 1/29/2018.
  *
  * Controller for Alarms.
- *
  */
 
 public class AlarmsFragment extends Fragment implements AlarmsMainListener{
@@ -57,10 +56,10 @@ public class AlarmsFragment extends Fragment implements AlarmsMainListener{
 
     /**
      * Purpose - move from main to detail fragment
-     * @param data - GameEntity to be passed into Detailed Fragment.
+     * @param data - AlarmEntity to be passed into Detailed Fragment.
      */
     public void moveToDetailFragment(AlarmEntity data){
-        Log.d("GamesFragment", "==============moveToDetailFragment============");
+        Log.d("AlarmsFragment", "==============moveToDetailFragment============");
         detailedAlarmFragment = new DetailedAlarmFragment();
         //detailedAlarmFragment.setUpFragment(data, this, true);
         mView.changeContent(getChildFragmentManager(), detailedAlarmFragment, true);

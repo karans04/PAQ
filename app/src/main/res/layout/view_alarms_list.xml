@@ -6,14 +6,23 @@
     android:orientation="vertical"
     android:divider="@color/white">
 
+
     <ListView
         android:id="@+id/alarm_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_weight=".9"
         android:divider="@color/white"
         android:dividerHeight="15dp" >
-
     </ListView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight=".1"
+        android:text="@string/addAlarm" />
+
 
 </LinearLayout>
