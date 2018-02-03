@@ -1,14 +1,18 @@
 package com.example.k3vn19.paq.screen.main.controller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.example.k3vn19.paq.R;
 import com.example.k3vn19.paq.common.Enums;
 import com.example.k3vn19.paq.screen.alarms.controller.AlarmsFragment;
+import com.example.k3vn19.paq.screen.alarms.screens.detailedAlarm.controller.DetailedAlarmActivity;
 import com.example.k3vn19.paq.screen.main.model.MainModel;
 import com.example.k3vn19.paq.screen.main.view.MainView;
 import com.example.k3vn19.paq.screen.main.view.MainViewInterface;
@@ -144,4 +148,25 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar_items, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        Fragment fragment = null;
+
+        switch(id) {
+            case R.id.add_alarm_icon:
+                Intent detailedAlarmActivity = new Intent(MainActivity.this, DetailedAlarmActivity.class);
+                startActivity(detailedAlarmActivity);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }//end of class

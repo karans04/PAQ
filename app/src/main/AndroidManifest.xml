@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".screen.main.controller.MainActivity"/>
-
+        <activity android:name=".screen.alarms.screens.detailedAlarm.controller.DetailedAlarmActivity" />
     </application>
 
 </manifest>

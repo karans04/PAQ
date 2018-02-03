@@ -18,7 +18,7 @@ import com.example.k3vn19.paq.screen.alarms.screens.alarmsMain.view.AlarmsMainVi
  *           individual alarm pages.
  */
 
-public class AlarmsMainFragment extends Fragment implements AlarmsMainViewInterface.AlarmsMainViewListener{
+public class AlarmsMainFragment extends Fragment implements AlarmsMainViewInterface.AlarmsMainViewListener {
 
     private AlarmsMainView mView;
     private AlarmsMainModel mModel;
