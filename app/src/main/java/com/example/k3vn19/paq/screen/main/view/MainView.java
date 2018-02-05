@@ -62,7 +62,7 @@ public class MainView implements MainViewInterface, ViewPager.OnPageChangeListen
         tabLayout.setBackgroundColor(ContextCompat.getColor(ContextManager.getInstance().getApplicationContext(),R.color.colorPrimary));
 
         tabLayout.getTabAt(Enums.TabPosition.ALARMS.getVal()).setCustomView(tabAlarms);
-        tabLayout.getTabAt(Enums.TabPosition.WORLDCLOCK.getVal()).setCustomView(tabWorldClock);
+        tabLayout.getTabAt(Enums.TabPosition.MORE.getVal()).setCustomView(tabWorldClock);
         tabLayout.getTabAt(Enums.TabPosition.STOPWATCH.getVal()).setCustomView(tabStopwatch);
         tabLayout.getTabAt(Enums.TabPosition.TIMER.getVal()).setCustomView(tabTimer);
 
@@ -104,13 +104,13 @@ public class MainView implements MainViewInterface, ViewPager.OnPageChangeListen
 
             positionEnum = Enums.TabPosition.ALARMS;
 
-        } else if(position == Enums.TabPosition.WORLDCLOCK.getVal()) {
+        } else if(position == Enums.TabPosition.MORE.getVal()) {
             ((TextView) tabAlarms.findViewById(R.id.tab_textview)).setVisibility(View.GONE);
             ((TextView) tabWorldClock.findViewById(R.id.tab_textview)).setVisibility(View.VISIBLE);
             ((TextView) tabStopwatch.findViewById(R.id.tab_textview)).setVisibility(View.GONE);
             ((TextView) tabTimer.findViewById(R.id.tab_textview)).setVisibility(View.GONE);
 
-            positionEnum = Enums.TabPosition.WORLDCLOCK;
+            positionEnum = Enums.TabPosition.MORE;
 
         } else if(position == Enums.TabPosition.STOPWATCH.getVal()) {
             ((TextView) tabAlarms.findViewById(R.id.tab_textview)).setVisibility(View.GONE);

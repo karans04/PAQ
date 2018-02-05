@@ -16,6 +16,7 @@ import com.example.k3vn19.paq.screen.alarms.screens.detailedAlarm.controller.Det
 import com.example.k3vn19.paq.screen.main.model.MainModel;
 import com.example.k3vn19.paq.screen.main.view.MainView;
 import com.example.k3vn19.paq.screen.main.view.MainViewInterface;
+import com.example.k3vn19.paq.screen.more.controller.MoreFragment;
 import com.example.k3vn19.paq.screen.stopwatch.StopwatchFragment;
 import com.example.k3vn19.paq.screen.timer.TimerFragment;
 import com.example.k3vn19.paq.screen.worldclock.WorldClockFragment;
@@ -29,7 +30,7 @@ import com.example.k3vn19.paq.screen.worldclock.WorldClockFragment;
 public class MainActivity extends AppCompatActivity implements MainViewInterface.MainViewListener{
 
     private AlarmsFragment alarmsFragment;
-    private WorldClockFragment worldClockFragment;
+    private MoreFragment moreFragment;
     private StopwatchFragment stopwatchFragment;
     private TimerFragment timerFragment;
 
@@ -52,14 +53,14 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
 
         Fragment[] fragments = new Fragment[4];
         alarmsFragment = new AlarmsFragment();
-        worldClockFragment = new WorldClockFragment();
+        moreFragment = new MoreFragment();
         stopwatchFragment = new StopwatchFragment();
         timerFragment = new TimerFragment();
 
         Log.d("MainActivity", "onCreate()-after fragment[]=================");
 
         fragments[Enums.TabPosition.ALARMS.getVal()] = alarmsFragment;
-        fragments[Enums.TabPosition.WORLDCLOCK.getVal()] = stopwatchFragment;
+        fragments[Enums.TabPosition.MORE.getVal()] = moreFragment;
         fragments[Enums.TabPosition.STOPWATCH.getVal()] = stopwatchFragment;
         fragments[Enums.TabPosition.TIMER.getVal()] = timerFragment;
 
@@ -133,8 +134,8 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
 
         if(currentTabPosition == Enums.TabPosition.ALARMS) {
             fragment = alarmsFragment;
-        } else if(currentTabPosition == Enums.TabPosition.WORLDCLOCK){
-            fragment = worldClockFragment;
+        } else if(currentTabPosition == Enums.TabPosition.MORE){
+            fragment = moreFragment;
         } else if(currentTabPosition == Enums.TabPosition.STOPWATCH){
             fragment = stopwatchFragment;
         } else{
@@ -160,15 +161,15 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
         int id = item.getItemId();
         Fragment fragment = null;
 
-        /*
+/*
         switch(id) {
             case R.id.add_alarm_icon:
                 Intent detailedAlarmActivity = new Intent(MainActivity.this, DetailedAlarmActivity.class);
                 startActivity(detailedAlarmActivity);
                 break;
         }
-        */
 
+*/
         return super.onOptionsItemSelected(item);
     }
 }//end of class

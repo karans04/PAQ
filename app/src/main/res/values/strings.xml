@@ -27,4 +27,11 @@
     <string name="detailed_intensity">INTENSITY</string>
     <string name="detailed_seqLength">SEQUENCE LENGTH</string>
 
+    <!-- view_more.xml -->
+    <string name="more_AboutPaq">ABOUT PAQ</string>
+    <string name="more_ConnectDevice">CONNECT DEVICE</string>
+    <string name="more_FAQ">FAQ</string>
+    <string name="more_ReportProblem">REPORT A PROBLEM</string>
+
+
 </resources>

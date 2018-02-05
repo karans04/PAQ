@@ -10,7 +10,7 @@ public class Enums {
 
     public enum TabPosition{
         ALARMS(0),
-        WORLDCLOCK(1),
+        MORE(1),
         STOPWATCH(2),
         TIMER(3);
 
