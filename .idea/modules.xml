@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PAQ.iml" filepath="$PROJECT_DIR$/PAQ.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/PAQ_Main.iml" filepath="$PROJECT_DIR$/.idea/PAQ_Main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\k3vn19\Documents\PAQ\.idea\PAQ_Main.iml" filepath="C:\Users\k3vn19\Documents\PAQ\.idea\PAQ_Main.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

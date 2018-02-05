@@ -1,10 +1,9 @@
 package com.example.k3vn19.paq.screen.alarms.screens.detailedAlarm.controller;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.example.k3vn19.paq.screen.alarms.screens.detailedAlarm.model.DetailedAlarmModel;
 import com.example.k3vn19.paq.screen.alarms.screens.detailedAlarm.view.DetailedAlarmInterface;
@@ -12,48 +11,43 @@ import com.example.k3vn19.paq.screen.alarms.screens.detailedAlarm.view.DetailedA
 import com.example.k3vn19.paq.utils.database.AlarmEntity;
 
 /**
- * Created by k3vn19 on 1/30/2018.
+ * Created by k3vn19 on 2/5/2018.
  *
  * Purpose - Controller for DetailedAlarm. This package is for viewing specifics about alarms i.e.
  *           sequence, snooze, and intensity settings. The user will be able to edit alarm parameters
  *           and set alarms.
- *
- *
- *           TO BE REPLACED WITH DETAILEDALARMACTIVITY
  */
 
-public class DetailedAlarmFragment extends Fragment implements DetailedAlarmInterface.DetailedAlarmListener{
+public class DetailedAlarmActivity extends AppCompatActivity implements DetailedAlarmInterface.DetailedAlarmListener {
 
     private DetailedAlarmModel mModel;
     private DetailedAlarmView mView;
 
-
-    public void setUpFragment(AlarmEntity alarmEntity){
-        mModel = new DetailedAlarmModel();
-    }
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceBundle){
-        mView = new DetailedAlarmView(inflater, container);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        Log.d("DetailedAlarmActivity", "onCreate=====================");
+        mModel = new DetailedAlarmModel();
+        mView = new DetailedAlarmView(LayoutInflater.from(this), null);
         mView.setListener(this);
 
-        return mView.getRootView();
+        setContentView(mView.getRootView());
+
     }
 
     @Override
     public void setAlarm(){
-
+        //make call to mModel to update database
     }
 
     @Override
     public void editAlarm(int index, AlarmEntity alarmEntity) {
-
+        //make call to mModel to update database
     }
 
     @Override
     public void addAlarm(AlarmEntity alarmEntity) {
-
+        //make call to mModel to update database
     }
-
-
 }

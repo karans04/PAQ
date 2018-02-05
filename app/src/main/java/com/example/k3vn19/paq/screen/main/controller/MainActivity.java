@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
 
         Log.d("MainActivity", "onCreate()-after tabs=================");
 
-        invalidateOptionsMenu(); //bug somewhere here
+        invalidateOptionsMenu();
         setSupportActionBar(mView.getToolbar());
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
 
     }
 
-    /*
+    /* FOR WHEN WE HAVE USER ACCOUNTS
     private void goToLogin() {
         startActivity(new Intent(this, LoginActivity.class));
     }
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.toolbar_items, menu);
+        //getMenuInflater().inflate(R.menu.toolbar_items, menu);
         return true;
     }
 
@@ -160,12 +160,14 @@ public class MainActivity extends AppCompatActivity implements MainViewInterface
         int id = item.getItemId();
         Fragment fragment = null;
 
+        /*
         switch(id) {
             case R.id.add_alarm_icon:
                 Intent detailedAlarmActivity = new Intent(MainActivity.this, DetailedAlarmActivity.class);
                 startActivity(detailedAlarmActivity);
                 break;
         }
+        */
 
         return super.onOptionsItemSelected(item);
     }

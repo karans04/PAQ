@@ -42,7 +42,7 @@ public class StartActivity extends AppCompatActivity {
 
     @Override
     protected void onStart(){
-        super.onStart();;
+        super.onStart();
 
         if(mModel.isLoggedIn()){
             //Toast.makeText(this, FirebaseAuthManager.getEmail(), Toast.LENGTH_SHORT).show();

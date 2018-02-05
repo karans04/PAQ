@@ -1,5 +1,6 @@
 package com.example.k3vn19.paq.screen.alarms.controller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -9,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.k3vn19.paq.screen.alarms.screens.alarmsMain.AlarmsMainListener;
 import com.example.k3vn19.paq.screen.alarms.screens.alarmsMain.controller.AlarmsMainFragment;
-import com.example.k3vn19.paq.screen.alarms.screens.detailedAlarm.controller.DetailedAlarmFragment;
+import com.example.k3vn19.paq.screen.alarms.screens.detailedAlarm.controller.DetailedAlarmActivity;
 import com.example.k3vn19.paq.screen.alarms.view.AlarmsView;
 import com.example.k3vn19.paq.utils.database.AlarmEntity;
 
@@ -23,7 +24,6 @@ public class AlarmsFragment extends Fragment implements AlarmsMainListener{
 
     AlarmsView mView;
     AlarmsMainFragment alarmsMainFragment;
-    DetailedAlarmFragment detailedAlarmFragment;
 
     //This flag is true when this screen is shown
     private boolean isScreenShow = false;
@@ -60,9 +60,12 @@ public class AlarmsFragment extends Fragment implements AlarmsMainListener{
      */
     public void moveToDetailFragment(AlarmEntity data){
         Log.d("AlarmsFragment", "==============moveToDetailFragment============");
-        detailedAlarmFragment = new DetailedAlarmFragment();
+        //detailedAlarmFragment = new DetailedAlarmFragment();
         //detailedAlarmFragment.setUpFragment(data, this, true);
-        mView.changeContent(getChildFragmentManager(), detailedAlarmFragment, true);
+        //mView.changeContent(getChildFragmentManager(), detailedAlarmFragment, true);
+
+        Intent intent = new Intent(getActivity(), DetailedAlarmActivity.class);
+        startActivity(intent);
     }
 
 

@@ -29,10 +29,10 @@ public class DetailedAlarmView implements DetailedAlarmInterface, View.OnClickLi
     private final int MAXINTENSITY = 5;
     private final int MAXSEQLENGTH = 7;
 
-    //private final int MINNUMSNOOZE = 0; TODO - set these as the min values for seekbars
-    //private final int MINSNOOZELENGTH = 0;
-    //private final int MININTENSITY = 1;
-    //private final int MINSEQLENGTH = 0;
+    private final int MINNUMSNOOZE = 0; //TODO - set these as the min values for seekbars
+    private final int MINSNOOZELENGTH = 0;
+    private final int MININTENSITY = 1;
+    private final int MINSEQLENGTH = 0;
 
     private TextView tv_numSnooze;
     private TextView tv_snoozeLength;
@@ -48,6 +48,8 @@ public class DetailedAlarmView implements DetailedAlarmInterface, View.OnClickLi
     private DetailedAlarmListener listener;
 
     public DetailedAlarmView(LayoutInflater inflater, ViewGroup container){
+        Log.d("DetailedAlarmsView", "consructor===============");
+
         mRootView = inflater.inflate(R.layout.view_detailed_alarm, container, false);
 
         initialize();
@@ -57,6 +59,8 @@ public class DetailedAlarmView implements DetailedAlarmInterface, View.OnClickLi
      * Purpose - Initialize the seekbars, timepicker, textviews and button.
      */
     private void initialize(){
+
+        Log.d("DetailedAlarmsView", "initialize()===============");
 
         //seekbars
         sb_numSnooze = mRootView.findViewById(R.id.sb_numSnooze);
@@ -77,6 +81,9 @@ public class DetailedAlarmView implements DetailedAlarmInterface, View.OnClickLi
         tv_seqLength = mRootView.findViewById(R.id.tv_seqLength);
         tv_snoozeLength = mRootView.findViewById(R.id.tv_snoozeDuration);
 
+        //Initialize textviews to display 0.
+        setInitialSBText();
+
         //timepicker
         timePicker = mRootView.findViewById(R.id.detailed_timePicker);
 
@@ -85,6 +92,21 @@ public class DetailedAlarmView implements DetailedAlarmInterface, View.OnClickLi
         //createAlarm.setOnClickListener(this);
 
         intializeSeekerListeners();
+    }
+
+    /**
+     * Purpose - Set the text of the TextViews above the SeekBars initially to min values.
+     */
+    private void setInitialSBText(){
+        String initSeqLength = "" + MINSEQLENGTH;
+        String initSnoozeLength = "" + MINSNOOZELENGTH;
+        String initNumSnooze = "" + MINNUMSNOOZE;
+        String initIntensity = "" + MININTENSITY;
+
+        tv_seqLength.setText(initSeqLength);
+        tv_snoozeLength.setText(initSnoozeLength);
+        tv_numSnooze.setText(initNumSnooze);
+        tv_intensity.setText(initIntensity);
     }
 
     /**
