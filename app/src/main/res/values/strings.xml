@@ -4,6 +4,12 @@
     <string name="description">Description</string>
 
 
+    <string name="createNewAlarmTitle">New Alarm</string>
+    <string name="saveAlarm">Save</string>
+    <string name="cancelAlarm">Cancel</string>
+
+
+
     <!-- For setting up tabs in MainView -->
     <string name="alarmsText">ALARMS</string>
     <string name="worldClockText">WORLD CLOCK</string>

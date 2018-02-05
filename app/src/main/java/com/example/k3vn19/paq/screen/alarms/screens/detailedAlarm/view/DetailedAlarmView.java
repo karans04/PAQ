@@ -41,8 +41,8 @@ public class DetailedAlarmView implements DetailedAlarmInterface, View.OnClickLi
 
     private TimePicker timePicker;
 
-    private Button createAlarm;
 
+    private TextView cancelButton;
 
     private View mRootView;
     private DetailedAlarmListener listener;
@@ -81,8 +81,8 @@ public class DetailedAlarmView implements DetailedAlarmInterface, View.OnClickLi
         timePicker = mRootView.findViewById(R.id.detailed_timePicker);
 
         //buttons
-        createAlarm = mRootView.findViewById(R.id.bt_confirm);
-        createAlarm.setOnClickListener(this);
+        //createAlarm = mRootView.findViewById(R.id.bt_confirm);
+        //createAlarm.setOnClickListener(this);
 
         intializeSeekerListeners();
     }
@@ -96,6 +96,7 @@ public class DetailedAlarmView implements DetailedAlarmInterface, View.OnClickLi
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 String toShow = "" + i;
+                Log.d("DetailedAlaramView", "seekBarSeqLength " + i + " ===========");
                 tv_seqLength.setText(toShow);
             }
 

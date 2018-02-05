@@ -42,5 +42,15 @@ public class DetailedAlarmFragment extends Fragment implements DetailedAlarmInte
 
     }
 
+    @Override
+    public void editAlarm(int index, AlarmEntity alarmEntity) {
+
+    }
+
+    @Override
+    public void addAlarm(AlarmEntity alarmEntity) {
+
+    }
+
 
 }
